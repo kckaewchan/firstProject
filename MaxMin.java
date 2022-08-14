@@ -21,3 +21,26 @@
   }
 
   // Time Complexity: O(n)
+
+
+  // min({4, 781, 8, 99, 103})  -> 4
+  // min({1, 2, 3, 4, 5})       -> 1
+  // min({3, 4})                -> 3
+  // min({100})                 -> 100
+
+  public int min(int[] arrNum) {
+    // assume first element of array is the smallest number
+    int min = arrNum[0];
+
+    // loop over the array and test assumption
+    for(int i = 0; i < arrNum.length; i++) {
+      // if min was not smallest, update it
+      if(min > arrNum[i]) {
+        min = arrNum[i];
+      }
+    }
+
+    return min;
+  }
+
+  // Time Complexity: O(n)
